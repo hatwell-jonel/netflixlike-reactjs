@@ -1,0 +1,59 @@
+@import "./variables";
+@import "./Landing_page/banner";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $clr-black;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+.btn,
+button {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.btn {
+  background-color: $clr-primary;
+  color: $clr-white;
+  padding: 0.3rem 1rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+
+  &:hover {
+    color: $clr-white;
+  }
+}
+
+.center {
+  margin: 0 auto;
+  width: 90% !important;
+  max-width: 1500px !important;
+}
