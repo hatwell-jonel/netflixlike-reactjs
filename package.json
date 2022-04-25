@@ -1,6 +1,6 @@
 {
-  "name": "netflix-clone",
   "homepage": "https://github.com/hatwell-jonel/netflix-clone-reactjs",
+  "name": "netflix-clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
