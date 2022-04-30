@@ -1,0 +1,28 @@
+.footer {
+  background-color: $clr-black;
+  color: #636f72;
+  pointer-events: none;
+  padding: 3rem 0rem 2rem;
+
+  .container {
+    max-width: 750px;
+    p {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+      }
+    }
+    .links_container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+      grid-gap: 0.5rem;
+      font-size: 0.85rem;
+
+      @include breakpoint(sm) {
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      }
+    }
+  }
+}

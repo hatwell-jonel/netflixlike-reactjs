@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Header from "./Header";
+import Banner from "./Banner";
+import Row from "./Row";
+import requests from "../../request";
+// import { GET_MOVIES } from "../../request";
 
 function Dashboard() {
   return (
-    <div>
-      <h1>Hello</h1>
+    <div className="dashboard">
+      <Header />
+      <Banner />
+
+      <div className="movies_container">
+        <div className="container">
+          <Row title="Originals" fetchUrl={requests.fetchNetflixOriginals} />
+          <Row title="Trending" fetchUrl={requests.fetchTrending} />
+          <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
+          <Row title="Actions" fetchUrl={requests.fetchActionMovies} />
+          <Row title="Comedy" fetchUrl={requests.fetchComedyMovies} />
+          <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} />
+          <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
+          <Row title="Documentaries" fetchUrl={requests.fetchDocumantaries} />
+        </div>
+      </div>
     </div>
   );
 }

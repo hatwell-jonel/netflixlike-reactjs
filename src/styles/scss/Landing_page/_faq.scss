@@ -1,0 +1,44 @@
+.faq {
+  padding: 8rem 0rem !important;
+  .title {
+    color: $clr-white;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 2rem !important;
+  }
+
+  .accordion_container {
+    width: 100%;
+    max-width: 500px;
+    margin: 1rem auto 1.5rem;
+
+    .accordion-item {
+      background-color: transparent;
+      margin-top: 0.5rem;
+      .accordion-header {
+        .accordion-button {
+          background-color: #303030;
+          color: $clr-white;
+          justify-content: space-between;
+
+          &:after {
+            content: "";
+            display: none;
+          }
+
+          .rot180 {
+            // transform: rotate(180deg) !important;
+          }
+        }
+      }
+
+      .accordion-collapse {
+        background-color: #303030 !important;
+        color: $clr-white;
+        margin-top: 0.1rem;
+      }
+    }
+  }
+}

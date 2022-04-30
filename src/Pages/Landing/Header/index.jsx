@@ -7,10 +7,12 @@ function Header() {
   return (
     <>
       <header className="header">
-        <img src={logo} className="img-fluid logo" alt="netflix" />
-        <Link to="dashboard">
-          <button className="btn">Sign In</button>
-        </Link>
+        <div className="container">
+          <img src={logo} className="img-fluid logo" alt="netflix" />
+          <Link to="/signin">
+            <button className="btn btn-signin">Sign In</button>
+          </Link>
+        </div>
       </header>
     </>
   );

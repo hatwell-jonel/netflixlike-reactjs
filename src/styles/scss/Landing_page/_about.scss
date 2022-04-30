@@ -1,0 +1,143 @@
+.about {
+  .about_section {
+    padding: 3rem 0rem !important;
+    color: $clr-white;
+    text-align: center;
+
+    &:nth-of-type(even) {
+      .text {
+        order: 1 !important;
+      }
+    }
+
+    @include breakpoint(lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text {
+      @include breakpoint(lg) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+      }
+      .title {
+        font-weight: bold;
+        font-size: clamp(1.7rem, 5vw, 2rem);
+
+        @include breakpoint(lg) {
+          font-size: 3rem;
+        }
+      }
+
+      .subtitle {
+        margin-top: 0.755rem;
+        padding: 0rem 1rem !important;
+        font-size: clamp(1.06rem, 5vw, 1.3rem);
+
+        @include breakpoint(md) {
+          font-size: 1.5rem;
+          padding: 0rem 0.8rem 0rem 0rem !important;
+        }
+      }
+    }
+
+    // TV ANIMATION
+    .video_animation_container {
+      position: relative;
+      .tv-img {
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+      }
+      .gif-container {
+        width: 75%;
+        max-width: 490px;
+        top: 49%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+
+        video {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    // DOWNLOAD ANIMATION
+
+    .download_animation_container {
+      position: relative;
+
+      .mobile-img {
+        margin: 0 auto;
+        height: 250px;
+
+        @include breakpoint(lg) {
+          height: 325px;
+        }
+      }
+
+      .download_animation {
+        background-color: $clr-black;
+        border: 3px solid #333;
+        border-radius: 10px;
+        display: flex;
+        padding: 0.3rem 0.8rem;
+        position: absolute;
+        width: 100%;
+        max-width: 250px;
+        bottom: 0.8rem;
+        left: 50%;
+        transform: translate(-50%);
+        img {
+          width: 40px;
+        }
+
+        .download_animation-center {
+          padding-left: 1rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          p {
+            font-size: 0.96rem;
+            text-align: left;
+          }
+
+          .strangerThings_text {
+            font-weight: bold;
+          }
+
+          .download_text {
+            font-size: 0.8rem;
+            color: #006add;
+          }
+        }
+
+        .download_animation-right {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .watch_anywhere {
+    @include breakpoint(lg) {
+      .text {
+        padding: 3rem 0rem !important;
+        .title {
+          width: 300px;
+          padding-right: 3rem;
+        }
+
+        .subtitle {
+          padding-right: 4rem !important;
+        }
+      }
+    }
+  }
+}

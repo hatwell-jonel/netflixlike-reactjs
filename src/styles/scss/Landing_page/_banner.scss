@@ -1,77 +1,106 @@
 .banner {
-  background-color: red;
+  min-width: 300px;
   background: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.8) 0,
-      rgba(0, 0, 0, 0) 60%,
-      rgba(0, 0, 0, 0.8) 100%
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.2) 60%,
+      rgba(0, 0, 0, 1) 100%
     ),
-    url("https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png")
+    // url("https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png")
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/59e045df-814d-4342-bf9d-e62ba23e916a/9f7ec46f-c8d3-4bb2-86a9-e5b3980ae64b/PH-en-20220418-popsignuptwoweeks-perspective_alpha_website_small.jpg")
       no-repeat center/cover;
   height: 100vh !important;
 
-  @include breakpoint(xxl) {
-    height: 750px !important;
+  @media screen and (min-height: 700px) {
+    height: 85vh !important;
+  }
+
+  @media screen and (min-height: 800px) {
+    height: 75vh !important;
+  }
+
+  @media screen and (min-height: 900px) {
+    height: 65vh !important;
+  }
+
+  @media screen and (min-height: 1000px) {
+    height: 60vh !important;
+    max-height: 725px;
   }
 
   .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.4rem 0rem 1rem;
-    height: 10vh;
+    padding: 0.8rem 0rem !important;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        width: 90px;
 
-    @include breakpoint(xxl) {
-      height: 10% !important;
-    }
+        @include breakpoint(md) {
+          width: clamp(110px, 5vw, 120px);
+        }
 
-    .logo {
-      width: 150px;
-      height: 35px;
+        @include breakpoint(lg) {
+          width: 120px;
+        }
+      }
+
+      .btn-signin {
+        padding: 0.2rem 0.5rem !important;
+        font-weight: normal;
+        font-size: 16px;
+
+        @include breakpoint(md) {
+          font-size: 18px;
+        }
+
+        @include breakpoint(lg) {
+          font-size: 22px;
+        }
+      }
     }
   }
 
   .hero {
+    padding: 0.3rem 0rem !important;
     height: 100%;
-    padding: 1rem 0rem;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    color: $clr-white;
+    text-align: center;
 
-    @include breakpoint(xxl) {
-      height: 675px !important;
-    }
+    .container {
+      max-width: 500px;
 
-    &_title {
-      color: $clr-white;
-      position: relative;
-      width: 100%;
-      padding: 75px 0;
-      max-width: 950px;
-      margin: 0 auto;
-      text-align: center;
-      z-index: 1;
+      @include breakpoint(md) {
+        max-width: 600px;
+      }
 
-      &-main {
+      @include breakpoint(lg) {
+        max-width: 700px;
+      }
+      .title {
+        font-size: clamp(1.6rem, 5vw, 2.8rem);
         font-weight: 700;
-        font-size: 3.125rem;
-        letter-spacing: 1px;
-        line-height: 1;
+        margin-top: 4rem;
+
+        @include breakpoint(md) {
+          font-size: clamp(2.9rem, 5vw, 3.1rem);
+          margin-top: 7rem;
+        }
+
+        @include breakpoint(lg) {
+          margin-top: 10rem;
+          padding: 0rem 2rem;
+        }
       }
 
-      &-submain {
-        margin-top: 0.3rem;
-        font-size: 1.625rem;
-      }
+      .sub-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-top: 1rem;
 
-      .form_email {
-        border: 1px solid red;
-        margin-top: 1.5rem;
-
-        h3 {
-          font-size: 1.3rem;
+        @include breakpoint(md) {
+          font-size: 1.5rem;
         }
       }
     }

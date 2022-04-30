@@ -1,21 +1,14 @@
 import React from "react";
+import GetEmail from "../../../Components/Getemail";
 
 function Hero() {
   return (
     <>
-      <div className="hero">
-        <div className="hero_title">
-          <h1 className="hero_title-main">
-            Unlimited movies, TV <br></br> shows, and more.
-          </h1>
-          <h2 className="hero_title-submain">Watch anywhere. Cancel anytime</h2>
-
-          <form className="form_email">
-            <h3 className="form_email-title">
-              Ready to watch? Enter your email to create or restart your
-              membership.
-            </h3>
-          </form>
+      <div className="hero border-bottom">
+        <div className="container">
+          <h1 className="title">Unlimited movies, TV shows, and more.</h1>
+          <h2 className="sub-title">Watch anywhere. Cancel anytime.</h2>
+          <GetEmail />
         </div>
       </div>
     </>

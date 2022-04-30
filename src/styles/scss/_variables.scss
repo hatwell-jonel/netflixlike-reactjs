@@ -2,6 +2,7 @@ $clr-primary: hsl(357, 93%, 46%);
 $clr-white: hsl(0, 0%, 100%);
 $clr-black: hsl(0, 0%, 0%);
 
+// MIXINS
 @mixin breakpoint($breakpoints) {
   @if $breakpoints == sm {
     @media screen and (min-width: 576px) {
@@ -21,6 +22,14 @@ $clr-black: hsl(0, 0%, 0%);
     }
   } @else if $breakpoints == xxl {
     @media screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+@mixin maxwidth-bp($breakpoint) {
+  @if $breakpoint == md {
+    @media screen and (max-width: 950px) {
       @content;
     }
   }

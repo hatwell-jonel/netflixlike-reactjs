@@ -1,5 +1,14 @@
 @import "./variables";
 @import "./Landing_page/banner";
+@import "./Landing_page/about";
+@import "./Landing_page/faq";
+@import "./Landing_page/footer";
+@import "./Dashboard/dashboard";
+
+@import "./Login/login";
+
+// COMPONENTS
+@import "./Component/getemail";
 
 *,
 *::before,
@@ -52,8 +61,6 @@ button {
   }
 }
 
-.center {
-  margin: 0 auto;
-  width: 90% !important;
-  max-width: 1500px !important;
+.border-bottom {
+  border-bottom: 10px solid #222 !important;
 }
