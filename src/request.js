@@ -1,7 +1,3 @@
-// API Key (v3 auth) - 0bed3335ab0850eab399fa490cae1e43
-// Example API Request - https://api.themoviedb.org/3/movie/550?api_key=0bed3335ab0850eab399fa490cae1e43
-// API Read Access Token (v4 auth) - eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYmVkMzMzNWFiMDg1MGVhYjM5OWZhNDkwY2FlMWU0MyIsInN1YiI6IjYyNjhhNGMzMTk2NzU3MDA1MWEyNzlmOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jGR9fPyrcCjd_XVgVbfqUN---9wsnlxRUP0nT1ninXs
-
 const API_KEY = process.env.REACT_APP_TMBD_APIKEY;
 
 const requests = {
