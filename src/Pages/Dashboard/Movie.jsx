@@ -16,13 +16,6 @@ function Movie() {
     getMovie();
   }, []);
 
-  const opts = {
-    height: "390",
-    width: "100%",
-    playerVars: {
-      autoplay: 1,
-    },
-  };
   return (
     <div className="dashboard">
       <Header />
@@ -57,7 +50,6 @@ function Movie() {
           </div>
         </div>
       </div>
-      <div className="container">x</div>
     </div>
   );
 }

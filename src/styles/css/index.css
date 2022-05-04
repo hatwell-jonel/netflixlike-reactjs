@@ -712,6 +712,99 @@
   }
 }
 
+.search_container button {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #222;
+  color: #f4f4f4;
+}
+.search_container .search {
+  position: absolute;
+  bottom: -80px;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .search_container .search {
+    position: absolute;
+    bottom: 0;
+    left: inherit;
+    transform: translateX(0);
+    width: auto;
+    right: 120px !important;
+  }
+}
+.search_container .search .search_bar-input {
+  background-color: #222;
+  border-radius: 40px 0px 0px 40px;
+  caret-color: white;
+  color: white;
+  padding: 0.5rem 1.3rem;
+}
+.search_container .search .search_bar-btn {
+  height: 40px;
+  max-height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  border-radius: 0px 40px 40px 0px;
+}
+.search_container .search .search_result {
+  background-color: #222;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  max-height: 350px;
+  z-index: 99;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.search_container .search .search_result::-webkit-scrollbar {
+  appearance: none;
+  display: none;
+}
+.search_container .search .search_result .search_placeholder {
+  color: white;
+  text-align: center;
+  border: 1px solid red;
+  padding: 1rem;
+}
+.search_container .search .search_result .item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  gap: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  background-color: #222;
+  word-wrap: break-word;
+}
+.search_container .search .search_result .item:hover {
+  background-color: #3c3c3c;
+}
+.search_container .search .search_result .item-img {
+  width: 100%;
+  max-width: 40px;
+  height: 100%;
+  max-height: 100%;
+}
+.search_container .search .search_result .item-img img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: fill;
+}
+.search_container .search .search_result .item-text {
+  word-wrap: break-word;
+  color: white;
+  font-size: 0.87rem;
+  text-transform: capitalize;
+}
+
 *,
 *::before,
 *::after {
@@ -764,4 +857,63 @@ button {
 
 .border-bottom {
   border-bottom: 10px solid #222 !important;
+}
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: #333333;
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51, 51, 51, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
 }

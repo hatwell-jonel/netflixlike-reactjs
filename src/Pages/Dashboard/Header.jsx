@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo-netflix.png";
+import Search from "./Search";
 import imgPlaceholder from "../../images/image-placeholder.png";
 
 function Header() {
@@ -19,10 +20,6 @@ function Header() {
         setShow(false);
       }
     });
-
-    // return () => {
-    //   window.addEventListener("scroll");
-    // };
   }, []);
 
   return (
@@ -32,9 +29,9 @@ function Header() {
           <img src={logo} className="logo" alt="netflix" />
         </Link>
 
+        <Search />
         <div className="profile" onClick={activeMenu}>
           <img src={imgPlaceholder} className="profile-img" alt="image" />
-
           <div className="setting">
             <button className="">
               <i className="fa-solid fa-angle-down"></i>

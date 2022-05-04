@@ -7,6 +7,7 @@ function Banner() {
   const imgUrl = "https://image.tmdb.org/t/p/original/";
 
   const [movie, setMovie] = useState([]);
+  const [mylist, setMylist] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -29,7 +30,7 @@ function Banner() {
   return (
     <div className="featured">
       <div className="featured-img">
-        <img src={`${imgUrl}${movie?.backdrop_path}`} alt={movie.title} />
+        <img src={`${imgUrl}${movie?.backdrop_path}`} alt={movie?.title} />
       </div>
 
       <div className="featured-text">

@@ -65,11 +65,15 @@ function Row({ title, fetchUrl }) {
 
                 <div className="details">
                   <Link to={`/dashboard/movie/${movie.id}`}>
-                    <button className="btn">
+                    <button
+                      className="btn"
+                      data-tooltip="View Details
+                    "
+                    >
                       <i className="fa-solid fa-eye"></i>
                     </button>
                   </Link>
-                  <button className="btn">
+                  <button className="btn" data-tooltip="Add to list">
                     <i className="fa-solid fa-heart"></i>
                   </button>
                 </div>
